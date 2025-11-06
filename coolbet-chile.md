@@ -1,8 +1,9 @@
 # Coolbet Chile - Test Scenarios Document
 
-**Platform:** https://www.coolbetchile.com/  
-**Document Version:** 2.0  
-**Date:** November 6, 2025  
+**Platform:** https://www.coolbetchile.com/
+**Document Version:** 2.1
+**Date:** November 6, 2025
+**Last Updated:** November 6, 2025 - Updated with actual registration form fields
 **Test Type:** Functional Testing - Success Scenarios
 
 ---
@@ -35,63 +36,219 @@
 
 **Objective:** Successfully register a new user account on Coolbet Chile
 
-**Preconditions:** 
+**Preconditions:**
 - Valid email address (not previously registered)
 - Must be 18+ years old
-- Valid Chilean RUT
+- Valid Chilean RUT (Chilean national identification number)
+- Valid Chilean mobile phone number (for SMS verification)
+- Valid Chilean address (street, city, zip code)
+- Have ready: First name, Father's last name, Mother's last name (or single family name)
+- Decide on a username/alias (minimum 6 characters)
 
 **Test Steps:**
 
+**STEP 1: Initial Registration Form**
+
 1. Navigate to https://www.coolbetchile.com/
    - **📸 Screenshot:** Homepage
-   
-2. Locate and click the Registration button (may be labeled "Registrarse", "Registro", "Crear Cuenta", or similar)
-   - **📸 Screenshot:** Registration button location
 
-3. Fill in ALL required registration fields with valid information:
-   - Email address
-   - Password (follow any requirements shown - length, complexity, etc.)
-   - First Name
-   - Last Name
-   - RUT (Chilean national identification number)
-   - Date of Birth (ensure you are 18+)
-   - Phone Number (Chilean format)
-   - Address details
-   - Any other mandatory fields marked with asterisk (*)
-   - **📸 Screenshot:** Completed registration form (before submission)
+2. Locate and click the Registration button or scroll to the registration form
+   - Form may be directly visible on homepage
+   - Or look for "Registrarse", "Registro", "Crear Cuenta" button
+   - **📸 Screenshot:** Registration form location
 
-4. Accept all required checkboxes:
-   - Terms and Conditions
-   - Privacy Policy  
-   - Age confirmation (18+)
-   - Any other mandatory agreements
-   - **📸 Screenshot:** All checkboxes checked
+3. Fill in the Email / Password section:
+   - **Email:** Enter a valid email address (not previously registered)
+   - **Password:** Create a password (note: password requirements may apply)
+   - **📸 Screenshot:** Email and password entered
 
-5. Click the Submit/Register button
-   - **📸 Screenshot:** Submission confirmation or success message
+4. Fill in the Mobile phone section:
+   - **Country Code:** Should be pre-selected as +56 (Chile)
+   - **Mobile number:** Enter valid Chilean mobile phone number
+   - Note the message: "Please use a valid mobile phone number. It will be used to send you a verification SMS"
+   - **📸 Screenshot:** Mobile phone number entered
 
-6. Check for email verification requirement:
-   - If email verification is required, check your email inbox
-   - **📸 Screenshot:** Verification email received
-   - Click the verification link in the email
-   - **📸 Screenshot:** Email verification success page
+5. Verify Country and Currency settings:
+   - **Country:** Chile (with flag icon) should be selected
+   - **Currency:** CLP (Chilean Peso) should be selected
+   - **📸 Screenshot:** Country and currency settings
 
-7. Confirm registration is complete:
-   - You should be logged in or prompted to login
-   - **📸 Screenshot:** Account dashboard or confirmation of successful registration
+6. Accept all required checkboxes (all are mandatory):
+   - ☑ "I confirm that I am at least 18 years old and that I am playing on my own behalf"
+   - ☑ "I agree to the Terms, and have read the Privacy Policy, including the Cookie Policy"
+   - ☑ "I consent to my data being shared with advertisers and social media platforms for targeted advertising"
+   - **📸 Screenshot:** All three checkboxes checked
+
+7. Review the gambling warning message:
+   - "Attention! Gambling can be addictive! Play responsibly!"
+   - **📸 Screenshot:** Complete form ready for submission
+
+8. Click the green "REGISTER" button
+   - **📸 Screenshot:** After clicking Register
+
+**STEP 2: Contact Information Form (USER INFO → CONTACT INFO)**
+
+9. You should now see a progress bar with three steps:
+   - USER INFO (completed - green checkmark)
+   - CONTACT INFO (current - active)
+   - SMS VERIFICATION (pending)
+   - **📸 Screenshot:** Progress indicator showing CONTACT INFO step
+
+10. Fill in Personal Name information:
+    - **First name:** Enter your first name
+    - **Father's last name:** Enter your father's last name (apellido paterno)
+    - **Mother's last name:** Enter your mother's last name (apellido materno)
+    - **Toggle option:** "I only have one family name" - use if applicable (leave OFF for standard two last names)
+    - **📸 Screenshot:** Name fields completed
+
+11. Select Gender:
+    - Choose either MALE or FEMALE radio button
+    - **📸 Screenshot:** Gender selected
+
+12. Enter RUT code:
+    - **RUT code:** Enter your Chilean national identification number (RUT)
+    - Format: XXXXXXXX-X
+    - **📸 Screenshot:** RUT entered
+
+13. Enter Date of Birth:
+    - **Birth year:** Select from dropdown
+    - **Month:** Select from dropdown
+    - **Day:** Select from dropdown
+    - Ensure you are 18+ years old
+    - **📸 Screenshot:** Date of birth selected
+
+14. Enter Address information:
+    - **Address Line 1:** Street name and house number
+    - **Address Line 2 (optional):** Apartment, suite or space number (if applicable)
+    - **Zip Code:** Enter postal code
+    - **City:** Enter city name
+    - **📸 Screenshot:** Address fields completed
+
+15. Enter Alias:
+    - **Alias:** Create a username/alias (minimum 6 characters)
+    - **📸 Screenshot:** Alias entered
+
+16. Choose bonus offers preference:
+    - Question: "Do you want to receive bonus offers, free spins and promotion?"
+    - Select either YES or NO
+    - **📸 Screenshot:** Bonus preference selected
+
+17. Review all information in the Contact Info form:
+    - **📸 Screenshot:** Complete Contact Info form ready for submission
+
+18. Click the green "CREATE ACCOUNT" button
+    - **📸 Screenshot:** After clicking Create Account
+
+**STEP 3: SMS Verification**
+
+19. You should proceed to SMS VERIFICATION step:
+    - Progress bar should show: USER INFO ✓ → CONTACT INFO ✓ → SMS VERIFICATION (active)
+    - **📸 Screenshot:** SMS verification screen
+
+20. Check your mobile phone for verification SMS:
+    - **📸 Screenshot:** SMS received on phone (if possible)
+
+21. Enter the SMS verification code:
+    - Enter the code from the SMS
+    - **📸 Screenshot:** Verification code entered
+
+22. Confirm the SMS verification:
+    - Click Submit/Verify button
+    - **📸 Screenshot:** Verification confirmation
+
+**STEP 4: Confirm Registration Complete**
+
+23. Check for email confirmation:
+    - Check your email inbox for welcome/confirmation email
+    - **📸 Screenshot:** Confirmation email received
+
+24. Verify registration is complete:
+    - You should be logged in or prompted to login
+    - Account dashboard should be accessible
+    - **📸 Screenshot:** Account dashboard or confirmation of successful registration
+
+25. Verify account status:
+    - Check that you can see your account balance
+    - Verify your username/alias is displayed
+    - **📸 Screenshot:** Full account view showing successful registration
 
 **Expected Results:**
-- ✅ Registration form accepts all valid data
-- ✅ Registration completes successfully
+
+**Step 1 - Initial Form:**
+- ✅ Registration form loads correctly with all fields visible
+- ✅ Email, password, and mobile phone fields accept input
+- ✅ Country is pre-selected as Chile with +56 code
+- ✅ Currency is set to CLP
+- ✅ All three checkboxes are mandatory and functional
+- ✅ Social login options visible (Facebook, Google, Apple)
+- ✅ "DEPOSIT & PLAY" quick signup option available at top
+- ✅ Register button is clickable when form is complete
+
+**Step 2 - Contact Info Form:**
+- ✅ Progress bar displays correctly (USER INFO → CONTACT INFO → SMS VERIFICATION)
+- ✅ All name fields (First name, Father's last name, Mother's last name) accept input
+- ✅ "I only have one family name" toggle works if needed
+- ✅ Gender selection (Male/Female) works properly
+- ✅ RUT code field accepts Chilean RUT format
+- ✅ Date of birth dropdowns function correctly (Birth year, Month, Day)
+- ✅ Address fields accept input (Address Line 1, Line 2, Zip Code, City)
+- ✅ Alias field enforces minimum 6 characters
+- ✅ Bonus offers question (YES/NO) is selectable
+- ✅ "CREATE ACCOUNT" button is clickable when form is complete
+
+**Step 3 - SMS Verification:**
+- ✅ SMS verification code is sent to mobile phone
+- ✅ SMS arrives within reasonable time (1-2 minutes)
+- ✅ Verification code entry field is displayed
+- ✅ Code is accepted and verified successfully
+- ✅ Progress advances to completion
+
+**Step 4 - Registration Complete:**
 - ✅ Confirmation message displayed
-- ✅ Verification email sent (if required)
-- ✅ Email verification successful (if required)
+- ✅ Welcome/confirmation email received
 - ✅ User account is created and active
-- ✅ User can access their account dashboard
+- ✅ User is logged in automatically or can login
+- ✅ Account dashboard accessible
+- ✅ Username/alias displayed correctly
+- ✅ Account balance visible (should be 0 CLP initially)
 
 **Post-Test:**
-- **Record:** Username/Email used for registration
+- **Record:** Email used for registration
+- **Record:** Mobile phone number used
+- **Record:** Username/Alias created
+- **Record:** RUT number used
 - **Record:** Any account number or user ID assigned
+- **Record:** Registration method used (standard form or social login if tested)
+
+---
+
+### TC-REG-002: Alternative Registration Methods (Optional Testing)
+
+**Objective:** Test alternative registration methods available on Coolbet Chile
+
+**Alternative Methods Available:**
+
+**A) DEPOSIT & PLAY (Trustly Quick Signup)**
+- Green button at top of registration form: "DEPOSIT & PLAY"
+- Text: "SIGN UP QUICKLY THROUGH TRUSTLY BY CLICKING DEPOSIT & PLAY"
+- This method allows instant signup through Trustly payment service
+- Registration and deposit happen in one step
+- **Test if time permits:** Click this button and follow Trustly flow
+
+**B) Social Login Options**
+Three social login methods are available at bottom of form:
+1. **FACEBOOK** - Login/Register via Facebook account
+2. **GOOGLE** - Login/Register via Google account
+3. **APPLE** - Login/Register via Apple ID
+
+**Testing Social Login (if desired):**
+1. Select one of the social login options
+2. Authorize Coolbet Chile to access your social account
+3. Complete any additional required information
+4. Verify account is created and functional
+5. **📸 Screenshot:** Each step of social login process
+
+**Note:** These alternative methods are optional tests. The standard registration form (TC-REG-001) is the primary test case.
 
 ---
 
@@ -807,10 +964,20 @@ After completing all tests, provide:
 
 ---
 
-**Document Control:**  
-Version: 2.0 - Practical Testing Version  
-Date: November 6, 2025  
+**Document Control:**
+Version: 2.1 - Updated with Actual Registration Form Fields
+Previous Version: 2.0 - Practical Testing Version
+Date: November 6, 2025
 Status: Ready for Execution
+
+**Version 2.1 Updates:**
+- Updated TC-REG-001 with actual multi-step registration process
+- Added detailed field descriptions from real registration forms
+- Documented 3-step process: Initial Form → Contact Info → SMS Verification
+- Added Chilean-specific fields: Father's/Mother's last names, RUT format, Chilean address
+- Added TC-REG-002 for alternative registration methods (Trustly, Social Login)
+- Enhanced preconditions with complete requirements list
+- Added step-by-step screenshots requirements for each registration stage
 
 **Important Reminders:**
 - 📸 Screenshot EVERYTHING

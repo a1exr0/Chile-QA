@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:rojabet.com)"
-    ],
-    "deny": [],
-    "ask": []
-  }
-}

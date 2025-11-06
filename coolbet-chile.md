@@ -993,37 +993,3 @@ After completing all tests, provide:
 4. **Issues Log:** Any problems encountered during testing
 5. **Timing Report:** Duration for each test case
 6. **Recommendations:** Suggestions for improvements (if any)
-
----
-
-**Document Control:**
-Version: 2.2 - Login Updated & Success Scenarios Focus
-Previous Version: 2.1 - Updated with Actual Registration Form Fields
-Date: November 6, 2025
-Status: Ready for Execution
-
-**Version 2.2 Updates:**
-- Removed TC-REG-002 (Alternative Registration Methods) to streamline testing
-- Updated TC-LOG-001 with actual login form interface details
-- Added comprehensive login verification steps
-- Enhanced login expected results with detailed success criteria
-- Added password visibility toggle testing
-- Documented actual UI elements from login modal (Coolbet logo, social options, etc.)
-- Focused entirely on success scenarios (positive testing only)
-- Improved post-test recording requirements for login
-
-**Version 2.1 Updates:**
-- Updated TC-REG-001 with actual multi-step registration process
-- Added detailed field descriptions from real registration forms
-- Documented 3-step process: Initial Form → Contact Info → SMS Verification
-- Added Chilean-specific fields: Father's/Mother's last names, RUT format, Chilean address
-- Enhanced preconditions with complete requirements list
-- Added step-by-step screenshots requirements for each registration stage
-
-**Important Reminders:**
-- 📸 Screenshot EVERYTHING
-- Complete KYC whenever required
-- Use minimum deposit amount
-- Test casino slots (easier than sports betting)
-- Document all transaction IDs
-- Keep all email confirmations

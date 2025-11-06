@@ -1,10 +1,10 @@
 # Coolbet Chile - Test Scenarios Document
 
 **Platform:** https://www.coolbetchile.com/
-**Document Version:** 2.1
+**Document Version:** 2.2
 **Date:** November 6, 2025
-**Last Updated:** November 6, 2025 - Updated with actual registration form fields
-**Test Type:** Functional Testing - Success Scenarios
+**Last Updated:** November 6, 2025 - Updated login scenario with actual form, focused on success scenarios
+**Test Type:** Functional Testing - Success Scenarios Only
 
 ---
 
@@ -222,88 +222,120 @@
 
 ---
 
-### TC-REG-002: Alternative Registration Methods (Optional Testing)
-
-**Objective:** Test alternative registration methods available on Coolbet Chile
-
-**Alternative Methods Available:**
-
-**A) DEPOSIT & PLAY (Trustly Quick Signup)**
-- Green button at top of registration form: "DEPOSIT & PLAY"
-- Text: "SIGN UP QUICKLY THROUGH TRUSTLY BY CLICKING DEPOSIT & PLAY"
-- This method allows instant signup through Trustly payment service
-- Registration and deposit happen in one step
-- **Test if time permits:** Click this button and follow Trustly flow
-
-**B) Social Login Options**
-Three social login methods are available at bottom of form:
-1. **FACEBOOK** - Login/Register via Facebook account
-2. **GOOGLE** - Login/Register via Google account
-3. **APPLE** - Login/Register via Apple ID
-
-**Testing Social Login (if desired):**
-1. Select one of the social login options
-2. Authorize Coolbet Chile to access your social account
-3. Complete any additional required information
-4. Verify account is created and functional
-5. **📸 Screenshot:** Each step of social login process
-
-**Note:** These alternative methods are optional tests. The standard registration form (TC-REG-001) is the primary test case.
-
----
-
 ## 2. LOGIN TEST SCENARIO
 
-### TC-LOG-001: User Login
+### TC-LOG-001: User Login (Success Scenario)
 
-**Objective:** Successfully login to an existing Coolbet Chile account
+**Objective:** Successfully login to an existing Coolbet Chile account with valid credentials
 
-**Preconditions:** 
-- User account must already be registered
-- Email must be verified (if verification was required)
-- You have correct login credentials
+**Preconditions:**
+- User account must already be registered (TC-REG-001 completed)
+- SMS verification completed during registration
+- Account is active and not blocked
+- You have correct login credentials (email and password)
 
 **Test Steps:**
 
 1. Navigate to https://www.coolbetchile.com/
    - **📸 Screenshot:** Homepage
 
-2. Locate and click the Login button (may be labeled "Iniciar Sesión", "Login", "Ingresar", or similar)
-   - **📸 Screenshot:** Login button location
+2. Locate and click the Login button
+   - May be in top right corner or header
+   - Button may show "Iniciar Sesión", "Login", or "Ingresar"
+   - **📸 Screenshot:** Login button location on homepage
 
-3. Enter your registered email address in the email/username field
+3. Login modal/popup should appear with Coolbet logo at top
+   - **📸 Screenshot:** Login form displayed
+
+4. Review the login form elements:
+   - Email field
+   - Password field (with eye icon to show/hide password)
+   - "Forgot password?" link
+   - Green "LOGIN" button
+   - Social login options (Facebook, Google, Apple)
+   - Yellow "REGISTER" button at bottom
+   - **📸 Screenshot:** Complete login form interface
+
+5. Enter your registered email address in the Email field:
+   - Email used during registration (from TC-REG-001)
    - **📸 Screenshot:** Email entered
 
-4. Enter your password in the password field
-   - Note: Password should be masked (dots or asterisks)
-   - **📸 Screenshot:** Password field filled (masked)
+6. Enter your password in the Password field:
+   - Password should be masked (dots) by default
+   - Eye icon is visible to toggle password visibility
+   - **📸 Screenshot:** Password entered (masked)
 
-5. (Optional) If there is a "Remember Me" checkbox, you may check it for testing purposes
-   - **📸 Screenshot:** Remember Me option (if available)
+7. (Optional) Click the eye icon to verify password visibility toggle works:
+   - Click once to show password
+   - Click again to hide password
+   - **📸 Screenshot:** Password visibility toggle (if tested)
 
-6. Click the Login/Sign In button
-   - **📸 Screenshot:** Login button clicked
+8. Click the green "LOGIN" button:
+   - **📸 Screenshot:** After clicking LOGIN button
 
-7. Wait for login process to complete
-   - **📸 Screenshot:** Successful login - account dashboard/homepage
+9. Wait for authentication process to complete:
+   - Loading indicator may appear
+   - **📸 Screenshot:** Processing/loading (if visible)
 
-8. Verify you are logged in:
-   - Check for your username/account name displayed
-   - Verify account menu is accessible
-   - Confirm account balance is visible
-   - **📸 Screenshot:** Full logged-in dashboard view
+10. Verify successful login:
+    - Login modal closes
+    - You are redirected to account dashboard or main page (logged in state)
+    - **📸 Screenshot:** Successful login - account dashboard/homepage
+
+11. Verify logged-in account indicators:
+    - Username/alias is displayed in header (usually top right)
+    - Account menu/icon is accessible
+    - Account balance is visible (in CLP)
+    - Logout option is available
+    - **📸 Screenshot:** Account information displayed in header
+
+12. Access account menu/profile:
+    - Click on username or account icon
+    - Verify dropdown menu appears with options:
+      - Account details
+      - Balance
+      - Deposit
+      - Withdrawal
+      - Transaction history
+      - Settings
+      - Logout
+    - **📸 Screenshot:** Account menu expanded
+
+13. Navigate to account dashboard (if not already there):
+    - Look for "My Account", "Dashboard", "Mi Cuenta", or similar
+    - **📸 Screenshot:** Full account dashboard view
+
+14. Verify account dashboard displays:
+    - Current balance (CLP)
+    - Recent transactions or activity
+    - Quick access to deposit/withdrawal
+    - Promotions or bonuses (if any)
+    - Account status/verification level
+    - **📸 Screenshot:** Complete dashboard with all information visible
 
 **Expected Results:**
-- ✅ Login form accepts credentials
-- ✅ Login successful
-- ✅ User redirected to account area
-- ✅ Username/account info displayed
-- ✅ Account balance visible
+- ✅ Login form displays correctly with all elements (Coolbet logo, email, password, social options)
+- ✅ Email field accepts valid email address
+- ✅ Password field masks input by default
+- ✅ Eye icon toggles password visibility
+- ✅ "Forgot password?" link is visible and functional
+- ✅ "LOGIN" button is clickable with valid credentials entered
+- ✅ Authentication processes successfully
+- ✅ Login modal closes upon success
+- ✅ User is redirected to logged-in state (dashboard or homepage)
+- ✅ Username/alias displayed in header
+- ✅ Account balance visible and accurate
+- ✅ Account menu accessible with all options
+- ✅ No error messages displayed
 - ✅ All account features accessible
+- ✅ User session is established (stays logged in on page refresh)
 
 **Post-Test:**
+- **Record:** Email used for login
+- **Record:** Username/alias displayed
 - **Record:** Current account balance
 - **Record:** Account status (any notifications or pending actions)
+- **Record:** Any active bonuses or promotions shown
 
 ---
 
@@ -965,17 +997,26 @@ After completing all tests, provide:
 ---
 
 **Document Control:**
-Version: 2.1 - Updated with Actual Registration Form Fields
-Previous Version: 2.0 - Practical Testing Version
+Version: 2.2 - Login Updated & Success Scenarios Focus
+Previous Version: 2.1 - Updated with Actual Registration Form Fields
 Date: November 6, 2025
 Status: Ready for Execution
+
+**Version 2.2 Updates:**
+- Removed TC-REG-002 (Alternative Registration Methods) to streamline testing
+- Updated TC-LOG-001 with actual login form interface details
+- Added comprehensive login verification steps
+- Enhanced login expected results with detailed success criteria
+- Added password visibility toggle testing
+- Documented actual UI elements from login modal (Coolbet logo, social options, etc.)
+- Focused entirely on success scenarios (positive testing only)
+- Improved post-test recording requirements for login
 
 **Version 2.1 Updates:**
 - Updated TC-REG-001 with actual multi-step registration process
 - Added detailed field descriptions from real registration forms
 - Documented 3-step process: Initial Form → Contact Info → SMS Verification
 - Added Chilean-specific fields: Father's/Mother's last names, RUT format, Chilean address
-- Added TC-REG-002 for alternative registration methods (Trustly, Social Login)
 - Enhanced preconditions with complete requirements list
 - Added step-by-step screenshots requirements for each registration stage
 
